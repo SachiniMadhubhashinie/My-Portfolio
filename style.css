@@ -131,6 +131,17 @@ section.active {
     /* animation-delay: calc(4s * var(--i)); */ /* Often used with var(--i) */
 }
 
+@keyframes fill-text {
+    10%,
+    100% {
+        width: 0;
+    }
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
 
 
 .home-detail p {
