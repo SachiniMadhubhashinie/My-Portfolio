@@ -257,12 +257,21 @@ section.active {
     color: var(--main-color);
 }
 
-.services-container {
+/*.services-container {
     display: grid;
-    /* Sets up a responsive grid that fits columns between 30rem and 1fr wide */
+    Sets up a responsive grid that fits columns between 30rem and 1fr wide 
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap:2 rem;
     margin-bottom: 5rem;
+}*/
+
+/* Update your existing .services-container CSS */
+.services-container {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 2rem; 
+    margin-top: 3rem;
 }
 
 .services-container .services-box {
@@ -273,16 +282,35 @@ section.active {
       
 }
 
-.services-box .icon{
+/*.services-box .icon{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}*/
+
+.services-box .icon {
+    display: flex;
+    justify-content: space-between; /* Keeps the icons at opposite ends */
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%; /* Ensure the icon row spans full width */
+}
+.services-box {
+    /* Define a flexible width. On a row of 3, this makes them about 1/3 each, accounting for gap */
+    flex: 1 1 300px; /* flex-grow | flex-shrink | flex-basis */
+    max-width: 400px; /* Optional: Sets a maximum size for the box */
+    padding: 2.5rem 2rem;
+    background: #282c34; /* Use the dark background color from your image */
+    border-radius: 10px;
+    /* Add other styling like box-shadow, text color, etc. */
+    text-align: center;
 }
 
 .services-box .icon i{
     font-size: 4.5rem;
 }
-/* Styling for the H3 service title */
+
+
 .services-box h3 {
     /* Sets the font size for the service name (e.g., Product Strategy) */
     font-size: 2rem;
