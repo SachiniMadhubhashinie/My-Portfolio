@@ -426,3 +426,15 @@ section.active {
 .image-box:hover img {
     transform: scale(1.08); /* Zooms the image itself slightly more */
 }
+
+   
+.resume-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.resume-box h2{
+    font-size: 4.5rem;
+    
+}
