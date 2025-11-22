@@ -261,7 +261,7 @@ section.active {
     display: grid;
     /* Sets up a responsive grid that fits columns between 30rem and 1fr wide */
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:3 rem;
+    gap:2 rem;
     margin-bottom: 5rem;
 }
 
