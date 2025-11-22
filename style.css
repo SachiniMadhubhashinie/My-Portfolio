@@ -341,3 +341,72 @@ section.active {
     transform: rotate(225deg);
 }
 
+
+/* KEYFRAMES FOR ENTRANCE ANIMATION */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 1. Alignment and Spacing for the Gallery */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    
+    max-width: 1200px; 
+    margin: 50px auto 100px auto; /* Increased bottom margin for white space below */
+    padding: 0 20px; 
+}
+
+/* 2. Individual Image Box Setup */
+.image-box {
+    /* Layout properties for 4 columns */
+    flex: 1 1 22%; 
+    max-width: 250px; 
+    border-radius: 8px;
+    overflow: hidden; 
+    cursor: pointer; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    
+    /* Animation Setup (Start invisible and below) */
+    opacity: 0; 
+    transform: translateY(20px); 
+    
+    /* Hover Transition MUST be defined */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; 
+    
+    /* Apply Entrance Animation */
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+}
+
+/* 3. Staggered Animation Delay (Appearance) */
+.image-box:nth-child(1) { animation-delay: 0.1s; }
+.image-box:nth-child(2) { animation-delay: 0.2s; }
+.image-box:nth-child(3) { animation-delay: 0.3s; }
+.image-box:nth-child(4) { animation-delay: 0.4s; }
+
+/* 4. Hover Animation (Lift and Zoom) */
+.image-box:hover {
+    transform: translateY(-8px) scale(1.03); /* Lifts and slightly zooms the entire box */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); 
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Transition ensures the image zoom is also smooth */
+    transition: transform 0.4s ease-in-out; 
+}
+
+.image-box:hover img {
+    transform: scale(1.08); /* Zooms the image itself slightly more */
+}
