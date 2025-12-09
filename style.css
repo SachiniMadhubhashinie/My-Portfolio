@@ -63,7 +63,6 @@ nav a.active {
     display: none;
 }
 
-
 section {
     position: absolute;
     width: 100%;
@@ -245,7 +244,6 @@ section.active {
     color: var(--main-color);
 }
 
-
 .services-container {
     display: grid;
     /* Sets up a responsive grid that fits columns between 30rem and 1fr wide */
@@ -325,6 +323,56 @@ section.active {
 .services-box .icon a:hover i{
     transform: rotate(180deg);
 }
+
+/*Resume Css*/
+
+/*.resume-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 8rem;
+}
+
+.resume-box h2{
+    font-size: 4.5rem;
+}
+
+.resume-box p{
+    font-size: 1.4rem;
+}
+
+.resume-box .desc{
+    margin: 2rem 0 2.5rem;
+}
+
+.resume-box .resume-btn{
+    width: 100%;
+    height: 5.3rem;
+    background: var(--second-bg-color);
+    border: .2rem solid var(--second-bg-color);
+    font-size: 1.6em;
+    color:var(--white-color);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    border-radius: .8rem;
+    cursor: pointer;
+}
+
+.resume-box .resume-btn.active{
+    border-color: var(--main-color);
+    color:var(--main-color);
+}
+
+.resume-detail{
+    display: none;;
+}
+.resume-detail.active{
+    display: block;
+}
+
+.resume-box .heading{
+    font-size: 3.5rem;
+    text-align: left;
+}*/
 
 .resume-container {
   display: grid;
