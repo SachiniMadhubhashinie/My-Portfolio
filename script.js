@@ -1,29 +1,38 @@
-const navLinks=document.querySelectorAll('.header nav a');
-const logoLink=document.querySelectorAll('.logo');
+/*const resumeBtns = document.querySelectorAll('.resume-btn');
 
-const activePage = () => {
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-    });
-}
+resumeBtns.forEach((btn, idx) => {
+    btn.addEventListener('click', () => {
+           const resumeDetails = document.querySelectorAll('.resume-detail'); 
 
-navLinks.forEach((link,idx) => {
-    link.addEventListener('click', () => {
-           if(!link.classList.contains('active')) {
-                activePage();
+        resumeBtns.forEach(btn => {
+            btn.classList.remove('active');
+        });
+        btn.classList.add('active');
 
-                link.classList.add('active');
-           }
+        resumeDetails.forEach(detail => {
+            detail.classList.remove('active');
+        });
+        resumeDetails[idx].classList.add('active');
     });
 });
 
-logoLink.addEventListener('click',() => {
-    if(!navLinks[0].classList.contains('active')){
-        activePage();
+const resumeBtns = document.querySelectorAll('.resume-btn');
+const resumeDetails = document.querySelectorAll('.resume-detail');
 
-        navLinks[0].classList.add('active');
-    }
-});
+resumeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Reset buttons
+    resumeBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // Reset details
+    resumeDetails.forEach(detail => detail.classList.remove('active'));
+
+    // Show the one that matches data-target
+    const target = btn.getAttribute('data-target');
+    document.querySelector(`.resume-detail.${target}`).classList.add('active');
+  });
+});*/
 
 document.addEventListener("DOMContentLoaded", () => {
   const resumeBtns = document.querySelectorAll('.resume-btn');
