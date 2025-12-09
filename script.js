@@ -131,4 +131,23 @@ arrowLeft.addEventListener('click', () => {
   activePortfolio();
 });
 
+function initCVDownload() {
+  // Make sure the href matches your actual file name
+  const downloadBtn = document.querySelector('a[href="CV.pdf"]'); 
+  
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', (e) => {
+      // Optional: prevent double clicks
+      downloadBtn.style.opacity = '0.7';
+      setTimeout(() => {
+        downloadBtn.style.opacity = '1';
+      }, 500);
+    });
+  }
+}
+
+// Initialize after DOM is loaded
+document.addEventListener('DOMContentLoaded', initCVDownload);
+
+
 
